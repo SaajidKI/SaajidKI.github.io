@@ -1,5 +1,5 @@
 body {
-    font-family: comic sans ms, cursive;
+    font-family: comic sans ms, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -43,13 +43,10 @@ main {
     text-align: center;
 }
   
-#banner {
-    margin: 20px 0;
-}
-  
-#banner img {
-    max-width: 100%;
-    height: auto;
+.banner {
+    background-image: url("banner.jpg");
+    width: 100vw;
+    height: 19vh;
 }
   
 #introduction {
