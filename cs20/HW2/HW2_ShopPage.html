@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Shop Page | Jurassic Snuggles</title>
+    <style>
+        .card {
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 #00000033;
+            display: inline-block;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .card img {
+            height: 200px;
+            width: 100%;
+        }
+
+        .card h3 {
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        .card p {
+            color: gray;
+            font-size: 14px;
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        form {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .form-button {
+            background-color: #333;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Jurassic Snuggles</h1>
+        <nav>
+            <ul>
+                <li><a href="HW2_HomePage.html">Home</a></li>
+                <li><a href="HW2_AboutPage.html">About Us</a></li>
+                <li><a href="HW2_ShopPage.html">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Product 2">
+            <h3>Product 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Product 3">
+            <h3>Product 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+        </div>
+    <form>
+        <label for="product-select">Select a Product:</label>
+        <select id="product-select">
+            <option value="product1">Product 1</option>
+            <option value="product2">Product 2</option>
+            <option value="product3">Product 3</option>
+        </select>
+        <br><br>
+        <button class="form-button">Show Product </button>
+    </form>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2023 Jurassic Snuggles Inc.</p>
+    </footer>
+</body>
+</html>  
