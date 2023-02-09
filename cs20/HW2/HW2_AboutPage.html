@@ -6,14 +6,18 @@
     <link rel="stylesheet" href="style.css">
     <title>About Us | Jurassic Snuggles</title>
     <style>
-        #about {
-            background-color: #f2f2f2;
-            padding: 20px;
-            text-align: left;
+        #info-table {
+            background-color: #c2faaa;
+            height: 550px;
+            margin: 20px 100px;
+            border-style:double;
+            border-color: black;
+            border-width: 5px;
         }
 
-        .mission {
-            margin: 20px 0;
+        #links {
+            color: #2a04ff;
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -29,22 +33,33 @@
         </nav>
     </header>
     <main>
-        <section id="about">
-            <h2>About Us</h2>
-            <img src="team.jpg" width=auto height=200px>
-            <p>Jurassic Snuggles is a small business based in Toronto, Canada 
+        <div id="info-table">
+            <ul style="list-style: none; padding-right: 3vw;">
+                <li>
+                <strong>About Us</strong>:<br>
+                Jurassic Snuggles is a small business based in Medford, Massachusetts 
                 that was founded in 2022. Our mission is to bring joy and comfort
                 to people of all ages with our adorable and cuddly dinosaur plushies.
                 Our team is dedicated to creating high-quality products that are
-                made with care and attention to detail.</p>
-            <div class="mission">
-                <h3>Our Mission</h3>
-                <p>Our mission is to bring happiness to everyone who loves dinosaurs 
-                    and plushies by creating soft, cuddly, and high-quality products. 
-                    We believe that everyone deserves to have a friend to snuggle with, 
-                    and we are committed to making that happen.</p>
-            </div>
-        </section>
+                made with care and attention to detail.
+                </li><br>
+                <li>
+                <strong>Our Mission</strong>:<br>
+                Our mission is to bring happiness to everyone who loves dinosaurs 
+                and plushies by creating soft, cuddly, and high-quality products. 
+                We believe that everyone deserves to have a friend to snuggle with, 
+                and we are committed to making that happen.
+                </li><br>
+                <li>
+                <strong>Email</strong>:<br>
+                <a id="links" href="mailto: jurassicsnuggles@gmail.com">jurassicsnuggles@gmail.com</a>
+                </li><br>
+                <li>
+                <strong>Phone Number</strong>:<br>
+                <a id="links" href="tel:937-047-1056">937-047-1056</a>
+                </li><br>
+            </ul>
+        </div>
     </main>
     <footer>
         <p>Copyright &copy; 2023 Jurassic Snuggles Inc. | All Rights Reserved</p>
