@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="style.css"?>
+<album>
+    <song>
+        <title>Rolling in the Deep</title>
+        <artist>Adele</artist>
+        <artist>Paul Epworth</artist>
+        <genre>Pop</genre>
+        <genre>Soul</genre>
+        <year>2010</year>
+    </song>
+    <song>
+        <title>Uptown Funk</title>
+        <artist>Mark Ronson</artist>
+        <artist>Bruno Mars</artist>
+        <genre>Funk</genre>
+        <genre>Pop</genre>
+        <year>2014</year>
+    </song>
+    <song>
+        <title>Somebody That I Used to Know</title>
+        <artist>Gotye</artist>
+        <artist>Kimbra</artist>
+        <genre>Indie pop</genre>
+        <genre>Alternative rock</genre>
+        <year>2011</year>
+    </song>
+    <song>
+        <title>Blinding Lights</title>
+        <artist>The Weeknd</artist>
+        <genre>Synthwave</genre>
+        <year>2019</year>
+    </song>
+    <song>
+        <title>Can't Stop the Feeling!</title>
+        <artist>Justin Timberlake</artist>
+        <genre>Pop</genre>
+        <year>2016</year>
+    </song>
+    <song>
+        <title>Firework</title>
+        <artist>Katy Perry</artist>
+        <genre>Pop</genre>
+        <year>2010</year>
+    </song>
+    <song>
+        <title>Drivers License</title>
+        <artist>Olivia Rodrigo</artist>
+        <genre>Indie pop</genre>
+        <genre>Alternative rock</genre>
+        <year>2021</year>
+    </song>
+    <song>
+        <title>Bad and Boujee</title>
+        <artist>Migos</artist>
+        <genre>Trap</genre>
+        <year>2016</year>
+    </song>
+    <song>
+        <title>Hips Don't Lie</title>
+        <artist>Shakira</artist>
+        <artist>Wyclef Jean</artist>
+        <genre>Latin pop</genre>
+        <genre>Reggaeton</genre>
+        <year>2006</year>
+    </song>
+    <song>
+        <title>Empire State of Mind</title>
+        <artist>Jay-Z</artist>
+        <artist>Alicia Keys</artist>
+        <genre>Hip hop</genre>
+        <year>2009</year>
+    </song>
+</album>
