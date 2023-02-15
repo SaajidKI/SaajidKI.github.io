@@ -18,11 +18,11 @@ function calculateOrder() {
   
     total = roundToTwoDecimals(subtotal - discount + tax);
   
-    document.getElementById("hotdogQty").textContent = hotdogs;
+    document.getElementById("hotdogNum").textContent = hotdogs;
     document.getElementById("hotdogSubtotal").textContent = roundToTwoDecimals(hotdogSubtotal);
-    document.getElementById("friesQty").textContent = fries;
+    document.getElementById("friesNum").textContent = fries;
     document.getElementById("friesSubtotal").textContent = roundToTwoDecimals(friesSubtotal);
-    document.getElementById("drinkQty").textContent = drinks;
+    document.getElementById("drinkNum").textContent = drinks;
     document.getElementById("drinkSubtotal").textContent = roundToTwoDecimals(drinkSubtotal);
     document.getElementById("subtotal").textContent = roundToTwoDecimals(subtotal);
     document.getElementById("discount").textContent = "-" + roundToTwoDecimals(discount);
