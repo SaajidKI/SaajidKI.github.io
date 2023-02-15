@@ -1,7 +1,7 @@
 function calculateOrder() {
-    hotdogs = parseInt(document.getElementById("hotdogs").value);
-    fries = parseInt(document.getElementById("fries").value);
-    drinks = parseInt(document.getElementById("drinks").value);
+    hotdogs = prompt("How many hotdogs would you like?");
+    fries = prompt("How many french fries would you like?");
+    drinks = prompt("How many drinks would you like?");
   
     hotdogSubtotal = hotdogs * 4;
     friesSubtotal = fries * 3.5;
