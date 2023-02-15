@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Joe's Hotdog Stand Order</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>Joe's Hotdog Stand Order Form</h1>
+		<form>
+			<label for="hotdogs">How many hotdogs would you like?</label>
+			<input type="number" id="hotdogs" name="hotdogs"><br>
+
+			<label for="fries">How many french fries would you like?</label>
+			<input type="number" id="fries" name="fries"><br>
+
+			<label for="drinks">How many drinks would you like?</label>
+			<input type="number" id="drinks" name="drinks"><br>
+
+			<button type="button" onclick="calculateOrder()">Place Order</button>
+		</form>
+
+		<div id="orderSummary" class="hidden">
+			<h2>Order Summary</h2>
+			<table>
+				<tr>
+					<td>Item</td>
+					<td>Quantity</td>
+					<td>Price</td>
+					<td>Subtotal</td>
+				</tr>
+				<tr>
+					<td>Hotdogs</td>
+					<td id="hotdogNum"></td>
+					<td>$4.00</td>
+					<td id="hotdogSubtotal"></td>
+				</tr>
+				<tr>
+					<td>French Fries</td>
+					<td id="friesNum"></td>
+					<td>$3.50</td>
+					<td id="friesSubtotal"></td>
+				</tr>
+				<tr>
+					<td>Drinks</td>
+					<td id="drinkNum"></td>
+					<td>$1.75</td>
+					<td id="drinkSubtotal"></td>
+				</tr>
+				<tr>
+					<td colspan="3">Subtotal:</td>
+					<td id="subtotal"></td>
+				</tr>
+				<tr>
+					<td colspan="3">Discount (10%):</td>
+					<td id="discount"></td>
+				</tr>
+				<tr>
+					<td colspan="3">Tax (6.25%):</td>
+					<td id="tax"></td>
+				</tr>
+				<tr>
+					<td colspan="3">Total:</td>
+					<td id="total"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
