@@ -1,6 +1,48 @@
 .container {
+	width: 60%;
 	margin: 0 auto;
-	max-width: 600px;
+	font-family: comic sans ms, sans-serif;
+	text-align: center;
+}
+
+h1, form, table, button {
+	margin-top: 20px;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+input {
+	margin-bottom: 15px;
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+
+button {
+	background-color: #4CAF50;
+	color: white;
+	border-radius: 5px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+td {
+	text-align: center;
+	padding: 10px;
+	border-bottom: 1px solid #ddd;
+}
+
+.category {
+	text-align: left;
 }
 
 .hidden {

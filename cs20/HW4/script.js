@@ -6,28 +6,29 @@ function calculateOrder() {
     hotdogSubtotal = hotdogs * 4;
     friesSubtotal = fries * 3.5;
     drinkSubtotal = drinks * 1.75;
-    subtotal = roundToTwoDecimals(hotdogSubtotal + friesSubtotal + drinkSubtotal);
+    subtotal = hotdogSubtotal + friesSubtotal + drinkSubtotal;
   
     discount = 0;
+    total = 0;
     if (subtotal >= 20) {
-      discount = roundToTwoDecimals(0.1 * subtotal);
+        discount = roundToTwoDecimals(0.1 * subtotal);
     }
   
     taxRate = 0.0625;
-    tax = roundToTwoDecimals(taxRate * subtotal);
+    tax = taxRate * subtotal;
   
     total = roundToTwoDecimals(subtotal - discount + tax);
   
     document.getElementById("hotdogNum").textContent = hotdogs;
-    document.getElementById("hotdogSubtotal").textContent = roundToTwoDecimals(hotdogSubtotal);
+    document.getElementById("hotdogSubtotal").textContent = "$" + hotdogSubtotal;
     document.getElementById("friesNum").textContent = fries;
-    document.getElementById("friesSubtotal").textContent = roundToTwoDecimals(friesSubtotal);
+    document.getElementById("friesSubtotal").textContent = "$" + friesSubtotal;
     document.getElementById("drinkNum").textContent = drinks;
-    document.getElementById("drinkSubtotal").textContent = roundToTwoDecimals(drinkSubtotal);
-    document.getElementById("subtotal").textContent = roundToTwoDecimals(subtotal);
-    document.getElementById("discount").textContent = "-" + roundToTwoDecimals(discount);
-    document.getElementById("tax").textContent = roundToTwoDecimals(tax);
-    document.getElementById("total").textContent = roundToTwoDecimals(total);
+    document.getElementById("drinkSubtotal").textContent = "$" + drinkSubtotal;
+    document.getElementById("subtotal").textContent = "$" + roundToTwoDecimals(subtotal);
+    document.getElementById("discount").textContent = "-$" + roundToTwoDecimals(discount);
+    document.getElementById("tax").textContent = "$" + roundToTwoDecimals(tax);
+    document.getElementById("total").textContent = "$" + roundToTwoDecimals(total);
   
     document.getElementById("orderSummary").classList.remove("hidden");
 }
@@ -43,5 +44,3 @@ function roundToTwoDecimals(num) {
         return numStr.substring(0, dotIndex + 3);
     }
 }
-
-  
