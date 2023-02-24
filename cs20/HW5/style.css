@@ -1,0 +1,73 @@
+body {
+  font-family: comic sans ms, sans-serif;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.board {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #333333;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 10px #0000001a;
+}
+
+.square {
+  width: 120px;
+  height: 120px;
+  font-size: 70px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 120px;
+  cursor: pointer;
+  border: 3px solid #333333;
+  transition: all 0.3s ease-in-out;
+}
+
+.square:hover {
+  background-color: #f7f7f7;
+}
+
+.playerX {
+  color: #d80000;
+}
+
+.playerO {
+  color: #0088cc;
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#restart-button {
+  font-family: comic sans ms, sans-serif;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #9200cc;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#restart-button:hover {
+  background-color: #ac3dd8;
+}
