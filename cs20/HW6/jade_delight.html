@@ -169,7 +169,7 @@ function hideAddressFields() {
 		s += "<tr>";
 		s += td(makeSelect("quan" + i, 0, 10),"selectQuantity");
 		s += td(menuItems[i].name, "itemName");
-		s += td("$" +menuItems[i].cost.toFixed(2), "cost");
+		s += td("$" + menuItems[i].cost.toFixed(2), "cost");
 		s += td("$<input type='text' name='cost'/>", "totalCost");
 		s += "</tr>";
 	}
