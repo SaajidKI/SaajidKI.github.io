@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Song List</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<h1>My Song List</h1>
+	<script>
+		songList = {
+            songs: [
+            {
+                "title": "Rolling in the Deep",
+                "artists": ["Adele", "Paul Epworth"],
+                "genres": ["Pop", "Soul"],
+                "year": 2010
+            },  
+            {   
+                "title": "Uptown Funk",
+                "artists": ["Mark Ronson", "Bruno Mars"],
+                "genres": ["Funk", "Pop"],
+                "year": 2014
+            },  
+            {   
+                "title": "Somebody That I Used to Know",
+                "artists": ["Gotye", "Kimbra"],
+                "genres": ["Indie pop", "Alternative rock"],
+                "year": 2011
+            },  
+            {   
+                "title": "Blinding Lights",
+                "artists": ["The Weeknd"],
+                "genres": ["Synthwave"],
+                "year": 2019
+            },  
+            {   
+                "title": "Can't Stop the Feeling!",
+                "artists": ["Justin Timberlake"],
+                "genres": ["Pop"],
+                "year": 2016
+            },  
+            {   
+                "title": "Firework",
+                "artists": ["Katy Perry"],
+                "genres": ["Pop"],
+                "year": 2010
+            },  
+            {   
+                "title": "Drivers License",
+                "artists": ["Olivia Rodrigo"],
+                "genres": ["Indie pop", "Alternative rock"],
+                "year": 2021
+            },  
+            {   
+                "title": "Bad and Boujee",
+                "artists": ["Migos"],
+                "genres": ["Trap"],
+                "year": 2016
+            },  
+            {   
+                "title": "Hips Don't Lie",
+                "artists": ["Shakira", "Wyclef Jean"],
+                "genres": ["Latin pop", "Reggaeton"],
+                "year": 2006
+            },  
+            {   
+                "title": "Empire State of Mind",
+                "artists": ["Jay-Z", "Alicia Keys"],
+                "genres": ["Hip hop"],
+                "year": 2009
+            },  
+            {   
+                "title": "Shape of You",
+                "artists": ["Ed Sheeran"],
+                "genres": ["Pop", "Dancehall"],
+                "year": 2017
+            },  
+            {   
+                "title": "All of Me",
+                "artists": ["John Legend"],
+                "genres": ["Pop", "Soul"],
+                "year": 2013
+            },  
+            {   
+                "title": "Stressed Out",
+                "artists": ["Twenty One Pilots"],
+                "genres": ["Alternative pop", "Electropop"],
+                "year": 2015
+            },  
+            {   
+                "title": "Thrift Shop",
+                "artists": ["Macklemore & Ryan Lewis"],
+                "genres": ["Hip hop"],
+                "year": 2012
+            },  
+            {  
+                "title": "Royals",
+                "artists": ["Lorde"],
+                "genres": ["Alternative pop"],
+                "year": 2013
+            }
+            ]
+        };
+        
+        var data = JSON.stringify(songList);
+        document.body.innerHTML = data;
+    </script>
+</body>
+</html>
