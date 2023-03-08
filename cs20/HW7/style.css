@@ -59,3 +59,8 @@ pre {
 #jsonString {
     display: none;
 }
+
+#toggleButton {
+    display: block;
+    margin: 0 auto;
+}

@@ -52,9 +52,12 @@
         function formSubmit(event) {
             event.preventDefault();
             const selectedGenre = genreSelect.value;
-            const filteredSongs = allSongs.filter((song) =>
-                song.genres.includes(selectedGenre)
-            );
+            let filteredSongs = allSongs;
+            if (selectedGenre) {
+                filteredSongs = allSongs.filter((song) =>
+                    song.genres.includes(selectedGenre)
+                );
+            }
             displaySongs(filteredSongs);
         }
       
