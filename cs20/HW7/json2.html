@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Saajid's Song List</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Saajid's Song List</h1>
+    <button id="toggleButton">Raw JSON String</button>
+    <div class="divide"></div>
+    <pre id="jsonString"></pre>
+    <form id="filterForm">
+        <label for="genreSelect">Genre:</label>
+        <select id="genreSelect">
+            <option value="">All</option>
+        </select>
+        <button type="submit">Filter</button>
+    </form>
+    <div id="songList"></div>
+    <script>
+        let allSongs = [];
+        let jsonString = "";
+        const toggleButton = document.querySelector("#toggleButton");
+        const jsonStringElement = document.querySelector("#jsonString");
+        const genreSelect = document.querySelector("#genreSelect");
+        const songList = document.querySelector("#songList");
+        const filterForm = document.querySelector("#filterForm");
+      
+        function displaySongs(songs) {
+            songList.innerHTML = "";
+            songs.forEach((song) => {
+                const output =
+                    "<p>Title: " +
+                    song.title +
+                    "<br>" +
+                    "Artists: " +
+                    song.artists.join(", ") +
+                    "<br>" +
+                    "Genres: " +
+                    song.genres.join(", ") +
+                    "<br>" +
+                    "Year: " +
+                    song.year +
+                    "</p>";
+                songList.insertAdjacentHTML("beforeend", output);
+            });
+      
+            jsonStringElement.textContent = jsonString;
+            jsonStringElement.style.display = "none";
+        }
+      
+        function formSubmit(event) {
+            event.preventDefault();
+            const selectedGenre = genreSelect.value;
+            const filteredSongs = allSongs.filter((song) =>
+                song.genres.includes(selectedGenre)
+            );
+            displaySongs(filteredSongs);
+        }
+      
+        fetch("https://saajidki.github.io/cs20/HW7/songs.json")
+            .then((response) => response.json())
+            .then((data) => {
+                allSongs = data.songs;
+                const genres = [];
+                allSongs.forEach((song) => {
+                    song.genres.forEach((genre) => {
+                        if (!genres.includes(genre))
+                            genres.push(genre);
+                    });
+                });
+
+                genres.sort();      
+                genres.forEach((genre) => {
+                    const option = document.createElement("option");
+                    option.value = genre;
+                    option.textContent = genre;
+                    genreSelect.appendChild(option);
+                });
+      
+                jsonString = JSON.stringify({ songList: allSongs });
+                displaySongs(allSongs);
+            });
+      
+        filterForm.addEventListener("submit", formSubmit);
+        toggleButton.addEventListener("click", () => {
+            jsonStringElement.style.display =
+                jsonStringElement.style.display === "none" ? "block" : "none";
+        });
+    </script>
+</body>
+</html>
