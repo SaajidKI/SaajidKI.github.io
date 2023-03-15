@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Anime Quote API</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>Random Anime Quote API</h1>
+    <button onclick="loadData()">Random Quote</button>
+    <button onclick="loadDataWithFetch()">Random Quote (With Fetch)</button>
+
+    <div id="results"></div>
+
+    <div id="api-info">
+      <h2>API Description</h2>
+      <p>
+        The AnimeChan API provides a random quote from a variety of anime shows. 
+        The quotes can range from funny, inspiring, thought-provoking, or just 
+        plain interesting. Each quote includes the character who said it and the 
+        name of the series.
+      </p>
+      <p>
+        Source:
+        <a href="https://animechan.vercel.app"
+          >https://animechan.vercel.app</a
+        >
+      </p>
+      <h2>API Options</h2>
+      <p>
+        For both the XMLHttpRequest and fetch requests, the API endpoint used was 
+        <a href="https://animechan.vercel.app/api/random">https://animechan.vercel.app/api/random</a>, 
+        which returns a random anime quote.
+      </p>
+      <p>
+        In the XMLHttpRequest function, the GET method was used to 
+        retrieve data from the API. The responseType was set to "json" to ensure that the response is 
+        parsed as JSON data.
+      </p>
+      <p>
+        In the fetch function, the GET method was used by default to retrieve data 
+        from the API. The response was checked for success with the .ok property, and the JSON data was 
+        extracted using the .json() method.
+      </p>
+      <p>
+        Both functions are triggered by clicking the respective 
+        buttons on the webpage. The loadData() function uses the XMLHttpRequest function to retrieve data, 
+        while loadDataWithFetch() uses the fetch function to retrieve data.
+      </p>
+      <h2>Applications</h2>
+      <p>
+        Developers can use this API to add a random anime quote feature to their applications or websites.
+      </p>
+      <p>
+        Anime fans can use this API to generate random quotes from their favorite series.
+      </p>
+    </div>
+
+    <script>
+      function loadData() {
+        request = new XMLHttpRequest();
+
+        request.open("GET", "https://animechan.vercel.app/api/random");
+
+        request.responseType = "json";
+
+        request.onload = function () {
+          if (request.status === 200) {
+            data = request.response;
+            resultsDiv = document.getElementById("results");
+            resultsDiv.innerHTML =
+              "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+          } else {
+            console.error("Error: " + request.status);
+          }
+        };
+
+        request.send();
+      }
+
+      function loadDataWithFetch() {
+        fetch("https://animechan.vercel.app/api/random")
+          .then((response) => {
+            if (response.ok)
+              return response.json();
+            else
+              console.error("Error: " + response.status);
+          })
+          .then((data) => {
+            resultsDiv = document.getElementById("results");
+            resultsDiv.innerHTML =
+              "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+          })
+          .catch((error) => {
+            console.error("Error: " + error);
+          });
+      }
+    </script>
+  </body>
+</html>
