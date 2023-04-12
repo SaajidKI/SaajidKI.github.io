@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Two Owls Cafe</title>
+    <title>Two Owls Cafe | Home Page</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -51,9 +51,36 @@
         echo "<input type='submit' name='submit' value='Order' onclick='return validateForm()'>";
         echo "</form>";
         
-        echo "<form method='post' action='OrderSummary.php'>";
+        echo "<form method='post' action='OrderSummary.php' style='width: 140px'>";
         echo "<input type='submit' value='View Order' id='button'>";
         echo "</form>";
+
+        if (isset($_POST['submit'])) {
+            $ordered_items = array();
+            foreach ($_POST['quantity'] as $item_id => $item_quantity) {
+                if ($item_quantity > 0) {
+                    $ordered_items[] = array(
+                    'id' => $item_id,
+                    'quantity' => $item_quantity
+                    );
+                }
+            }
+
+            $firstname = mysqli_real_escape_string($conn, $_POST['firstname']);
+            $lastname = mysqli_real_escape_string($conn, $_POST['lastname']);
+            $instructions = mysqli_real_escape_string($conn, $_POST['instructions']);
+
+            $sql = "INSERT INTO past_orders (ordered_items, firstname, lastname, instructions) VALUES (";
+            $sql .= "'" . mysqli_real_escape_string($conn, json_encode($ordered_items)) . "', ";
+            $sql .= "'" . $firstname . "', ";
+            $sql .= "'" . $lastname . "', ";
+            $sql .= "'" . $instructions . "'";
+            $sql .= ")";
+
+            if (!mysqli_query($conn, $sql)) {
+                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+            }
+        }
 
         mysqli_close($conn);
     ?>
@@ -104,5 +131,3 @@
   
 </body>
 </html>
-
-
